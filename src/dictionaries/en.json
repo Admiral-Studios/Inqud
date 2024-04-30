@@ -1,0 +1,98 @@
+{
+  "header_tabs": {
+    "item1": "Business",
+    "item2": "Personal"
+  },
+  "header_nav_dropdown_dropdown_title": {
+    "item1": "Products"
+  },
+  "header_nav_dropdown_dropdown_items_title": {
+    "item1": "Business",
+    "item2": "Personal"
+  },
+  "header_nav_dropdown_dropdown_items_1_items": {
+    "item1": "Crypto widget",
+    "item2": "API",
+    "item3": "Card 2 crypto",
+    "item4": "Crypto exchange",
+    "item5": "Recurring payments",
+    "item6": "Accept crypto"
+  },
+  "header_nav_dropdown_dropdown_items_2_items": {
+    "item1": "Wallet",
+    "item2": "Exchange",
+    "item3": "Transfer money",
+    "item4": "Buy crypto with card",
+    "item5": "Pink market"
+  },
+  "header_items": {
+    "item1": "Company",
+    "item2": "Insights",
+    "item3": "Help centre"
+  },
+  "header_buttons_text": {
+    "login": "Log in",
+    "get_started": "Get started"
+  },
+  "footer": {
+    "footer_description": "Company name UAB I0 Ready\nAddress Eisiskiy Sody 18-oji g. 11, Vilnius, Lithuania",
+    "footer_resources_title": "Legal",
+    "footer_resources_items": {
+      "item1": "Privacy Notice",
+      "item2": "Cookie Policy",
+      "item3": "AML / KYC Policy",
+      "item4": "Modern slavery statement",
+      "item5": "Terms of use",
+      "item6": "Press kit"
+    },
+    "footer_legal_title": "Resources",
+    "footer_legal_items": {
+      "item1": "API Documentation",
+      "item2": "Insights",
+      "item3": "Help Center",
+      "item4": "Pitch deck",
+      "item5": "Contact us"
+    },
+    "footer_email_title": "Don't miss out on the most important updates. Subscribe now!",
+    "footer_email_button_text": "Subscribe",
+    "footer_email_description": "by submitting this form, you confirm that you agree to the storing and processing of your personal data",
+    "footer_all_rights_reserved": "© Inqud. 2023. All rights reserved."
+  },
+  "home_page_your_needs_section": {
+    "title": "We understand your needs",
+    "paragraph": "Backed by industry expertise"
+  },
+  "home_page_your_needs_section_list_item_title": {
+    "item1": "Accept global crypto payments",
+    "item2": "Tailored payment options",
+    "item3": "Reliable alternative payment system"
+  },
+  "home_page_your_needs_section_list_item_description": {
+    "item1": "Simplify your global payment process by accepting crypto currencies from around the world.",
+    "item2": "Need a specific payment method or currency for your business? Just ask! We'll be in touch to make it happen.",
+    "item3": "Ensure uninterrupted transactions with our robust backup payment system, offering rock-solid reliability and security."
+  },
+  "home_page_your_needs_section_list_item_button_text": "Add your request",
+  "home_page_your_needs_section_modal": {
+    "title": "Send your request",
+    "description": "Let's meet your goals!",
+    "label_email": "Email",
+    "label_message": "Message",
+    "placeholder_message": "Enter your request or question...",
+    "button_text": "Submit",
+    "footer_description": "by submitting this form, you confirm that you agree to the storing and processing of your personal data"
+  },
+  "home_page_crypto_widget_section": {
+    "comming_soon": "comming soon"
+  },
+  "blog_name_section": {
+    "title": "Insights"
+  },
+  "404_page_sub_title": "Page not found",
+  "404_page_button_text": "Back to home",
+  "modern_slavery_statement": {
+    "paragraph1": "At Inqud, our values drive us to set high ethical standards in the cryptocurrency sector. Upholding fairness, ethics, and transparency is fundamental to our mission.",
+    "paragraph2": "We're dedicated to eradicating modern slavery and human trafficking risks in our supply chains and business activities. We fully endorse the Modern Slavery Act 2015 and believe that organizations, especially in finance, must proactively address these issues.",
+    "paragraph3": "Read the full statement by clicking below"
+  }
+}
