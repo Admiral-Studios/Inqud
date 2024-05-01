@@ -16,8 +16,6 @@ This project is a business website developed using modern technologies to ensure
 
 - [Integration Datocms](#integration-datocms) 
 - [Integration Localization (Datocms with next-intl)](#integration-localization-(datocms-with-next-intl))
-- [Anchor links with sidebar](#anchor-links-with-sidebar)
-
 
 ## #Integration Datocms
 
@@ -171,6 +169,164 @@ export default async function HeroSection({ params }) {
 }
 ```
 
-## Integration Localization (Datocms with next-intl)
+## #Integration Localization (Datocms with next-intl)
 
-## #Anchor links with sidebar
+### Step 1
+
+Install next-intl:
+
+```
+yarn add next-intl
+```
+
+### Step 2
+
+Add middleware.js, i18n.js and layout.jsx configuration
+
+middleware.js:
+
+```
+import createMiddleware from 'next-intl/middleware'
+
+export default createMiddleware({
+  locales: ['en', 'ru'],
+  // locales: ['en', 'uk', 'es', 'ru'],
+
+  defaultLocale: 'en',
+  localePrefix: 'always',
+})
+
+export const config = {
+  matcher: ['/((?!api|_next|.*\\..*).*)'],
+}
+```
+
+i18n.js:
+
+```
+import { getRequestConfig } from 'next-intl/server'
+
+export default getRequestConfig(async ({ locale }) => ({
+  messages: (await import(`./src/dictionaries/${locale}.json`)).default,
+}))
+```
+
+app/layout.jsx:
+
+```
+export default async function RootLayout({ children, params: { locale } }) {
+  let messages
+  try {
+    messages = (await import(`../../dictionaries/${locale}.json`)).default
+  } catch (error) {
+    notFound()
+  }
+
+  return (
+    <html lang={locale}>
+      {/* <head>
+        <link
+          rel='stylesheet'
+          href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'
+        />
+        <link
+          href='
+https://cdn.jsdelivr.net/npm/react-toastify@9.1.3/dist/ReactToastify.min.css
+'
+          rel='stylesheet'
+        />
+      </head> */}
+
+      <body className={nunito.className}>
+        {/* <Script
+          src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js'
+          integrity='sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=='
+          crossOrigin='anonymous'
+          referrerPolicy='no-referrer'
+        /> */}
+        {/* <Script strategy='afterInteractive' id='google-analytics'>
+          {` 
+           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+           })(window,document,'script','dataLayer','GTM-5J4TMBX'); 
+         `}
+        </Script>
+        <noscript>
+          <iframe
+            title='googletagmanager'
+            src='https://www.googletagmanager.com/ns.html?id=GTM-5J4TMBX'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript> */}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <LayoutComponent>{children}</LayoutComponent>
+          {/* {children} */}
+          <div id='myportal' />
+          <div id='calendly-model-wrapper' />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  )
+}
+```
+
+### Step 3
+
+Change file structure
+
+![File structure](image-2.png)
+
+### Step 4
+
+Use localization content from json file
+
+```
+const yourNeedsSectionTrans = {
+  t: useTranslations('home_page_your_needs_section'),
+  tList: useTranslations('home_page_your_needs_section_list_item_title'),
+  tList2: useTranslations(
+    'home_page_your_needs_section_list_item_description'
+  ),
+  cartDescription: useTranslations(
+    'home_page_your_needs_section_list_item_description'
+  )(keysForLocale.keys3[1]),
+  cartTitle: useTranslations(
+    'home_page_your_needs_section_list_item_description'
+  )(keysForLocale.keys3[0]),
+}
+const yourNeedsSectionTransCart = {
+  cartDescription: useTranslations(
+    'home_page_your_needs_section_list_item_description'
+  )(keysForLocale.keys3[1]),
+  cartTitle: useTranslations(
+    'home_page_your_needs_section_list_item_description'
+  )(keysForLocale.keys3[0]),
+}
+const cryptoWidgetTrans = {
+  t: useTranslations('home_page_crypto_widget_section'),
+}
+const blogTrans = {
+  t: useTranslations('blog_name_section'),
+}
+```
+
+### Step 5
+
+Use localization content from Datocms.
+Add locales to Datocms
+
+![Locales in datocms](image-3.png)
+
+### Step 6
+
+Get localization content from Datocms
+
+```
+const { homePage: data } = await getData(HOME_B2B_CRYPTO_WIDGET, {
+  locale: params.locale,
+})
+```
