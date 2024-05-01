@@ -1,10 +1,10 @@
-## Inqud Website: Sample Next js project
+# Inqud Website: Sample Next js project
 
-# Description
+## Description
 
 This project is a business website developed using modern technologies to ensure an efficient and user-friendly experience. With this website, your business can showcase its products, services, and company information to a wide range of clients.
 
-# Technology Stack
+## Technology Stack
 
 - @mui/material: React component library that allows for quick and convenient development of stylish user interfaces.
 - next-intl: Next.js plugin providing internationalization support for your website.
@@ -12,7 +12,7 @@ This project is a business website developed using modern technologies to ensure
 - react-datocms: Library for interacting with DatoCMS, the leading headless CMS (Content Management System).
 - react-hook-form: Library for working with forms in React using hooks.
 
-# Examples of works
+## Examples of works
 
 - [Integration Datocms](#integration-datocms) 
 - [Integration Localization (Datocms with next-intl)](#integration-localization)
@@ -23,7 +23,7 @@ This project is a business website developed using modern technologies to ensure
 
 DatoCMS is a web-based content management system (CMS) that focuses on providing convenient tools for creating and managing content for websites and web applications. It prioritizes developers by offering a powerful API and integration tools while also providing a user-friendly interface for content editors. With flexible content types, templates, and fields, DatoCMS allows for customization to suit various project needs. Additionally, its emphasis on speed and productivity ensures efficient content creation, editing, and publishing processes.
 
-# Step 1:
+### Step 1:
 
 Create optimizing calls to DatoCMS:
 
@@ -63,19 +63,19 @@ export async function performRequest({
 
 We'll then use this function in all of our components that need to fetch content from DatoCMS.
 
-# Step 2
+### Step 2
 
 Create model and set content in Datocms
 
 ![Datocms model](image.png)
 
-# Step 3
+### Step 3
 
 Add content to modal
 
 ![Content modal](image-1.png)
 
-# Step 4 
+### Step 4 
 
 Create query
 
@@ -98,7 +98,7 @@ query MyQuery($locale: SiteLocale) {
 `
 ```
 
-# Step 5
+### Step 5
 
 Get Data
 
