@@ -15,7 +15,7 @@ The goal was to develop a marketing seo optimized website for a company that pro
 ## Examples of works
 
 - [Integration Datocms](#integration-datocms) 
-- [Integration Localization (Datocms with next-intl)](#integration-localization-(datocms-with-next-intl))
+- [Integration Localization](#integration-localization)
 
 ## #Integration Datocms
 
