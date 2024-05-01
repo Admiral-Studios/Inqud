@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a business website developed using modern technologies to ensure an efficient and user-friendly experience. With this website, your business can showcase its products, services, and company information to a wide range of clients.
+The goal was to develop a marketing seo optimized website for a company that provides services in the field of crypto and fiat payments. The company can independently change the entire site content for two languages without the participation of developers since all information on the site is displayed through the CMS. The site also has integration with support chat, Calendly, and the client’s CRM system.
 
 ## Technology Stack
 
