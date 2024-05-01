@@ -15,7 +15,7 @@ This project is a business website developed using modern technologies to ensure
 ## Examples of works
 
 - [Integration Datocms](#integration-datocms) 
-- [Integration Localization (Datocms with next-intl)](#integration-localization)
+- [Integration Localization (Datocms with next-intl)](#integration-localization-(datocms-with-next-intl))
 - [Anchor links with sidebar](#anchor-links-with-sidebar)
 
 
@@ -171,6 +171,6 @@ export default async function HeroSection({ params }) {
 }
 ```
 
-## #Integration Localization (Datocms with next-intl)
+## Integration Localization (Datocms with next-intl)
 
 ## #Anchor links with sidebar
