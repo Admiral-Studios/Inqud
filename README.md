@@ -169,7 +169,7 @@ export default async function HeroSection({ params }) {
 }
 ```
 
-## #Integration Localization (Datocms with next-intl)
+## #Integration Localization
 
 ### Step 1
 
