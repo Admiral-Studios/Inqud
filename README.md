@@ -1,3 +1,5 @@
+![Inqud](image-4.png)
+
 # Inqud Website: Sample Next js project
 
 ## Description
